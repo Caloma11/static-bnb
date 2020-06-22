@@ -1,0 +1,15 @@
+<h1>Flats :</h1>
+<ul>
+  <!-- Iterates through each flat, calling it "flat" -->
+  <% @flats.each do |flat| %>
+
+    <li>
+
+      <!-- Creates an anchor tag with the flat name, pointing it to the details url
+       (ex: <a href="flats/145">Bohemian Flat in Monmartre</a>)  -->
+      <%= link_to flat["name"], flat_path(flat["id"]) %>
+
+      <!-- Displays the flat's price and priceCurrency info -->
+      - <%= flat["price"] %> <%= flat["priceCurrency"] %> </li>
+  <% end %>
+</ul>

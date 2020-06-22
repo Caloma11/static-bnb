@@ -1,0 +1,11 @@
+<!-- Shows the details of the flat found based on the id coming from the url -->
+
+<h1><%= @flat["name"] %></h1>
+
+<h2>Price: <%= @flat["price"] %> <%= @flat["priceCurrency"] %></h2>
+
+<img src="<%= @flat["imageUrl"] %>" alt="">
+
+<!-- Uses the root prefix ( try $rails routes !!!) to create a link to the home page -->
+
+<%= link_to "Back", root_path %>
